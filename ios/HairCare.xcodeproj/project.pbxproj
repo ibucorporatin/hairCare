@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-HairCare-HairCareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-HairCare-HairCareTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		2328CE8CB6644DCE9F77998E /* Onest-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1851C7E63D40F9BA4EF193 /* Onest-Bold.ttf */; };
+		DAA1E8493F964B08BC52945D /* Onest-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41519703730E4FFC94E23660 /* Onest-Regular.ttf */; };
+		07D814D629AD45CB83A8A7CA /* Onest-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1941BDA577B4874907BE2D6 /* Onest-SemiBold.ttf */; };
+		718BB24675D841E0891E0C89 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3797AE0F68E4ED79702616C /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HairCare/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-HairCare-HairCareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairCare-HairCareTests.release.xcconfig"; path = "Target Support Files/Pods-HairCare-HairCareTests/Pods-HairCare-HairCareTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7F1851C7E63D40F9BA4EF193 /* Onest-Bold.ttf */ = {isa = PBXFileReference; name = "Onest-Bold.ttf"; path = "../assets/fonts/Onest-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		41519703730E4FFC94E23660 /* Onest-Regular.ttf */ = {isa = PBXFileReference; name = "Onest-Regular.ttf"; path = "../assets/fonts/Onest-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B1941BDA577B4874907BE2D6 /* Onest-SemiBold.ttf */ = {isa = PBXFileReference; name = "Onest-SemiBold.ttf"; path = "../assets/fonts/Onest-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C3797AE0F68E4ED79702616C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D52EE2DCCE3F4707ABE0E22F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		D52EE2DCCE3F4707ABE0E22F /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7F1851C7E63D40F9BA4EF193 /* Onest-Bold.ttf */,
+				41519703730E4FFC94E23660 /* Onest-Regular.ttf */,
+				B1941BDA577B4874907BE2D6 /* Onest-SemiBold.ttf */,
+				C3797AE0F68E4ED79702616C /* Poppins-Bold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -243,6 +264,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2328CE8CB6644DCE9F77998E /* Onest-Bold.ttf in Resources */,
+				DAA1E8493F964B08BC52945D /* Onest-Regular.ttf in Resources */,
+				07D814D629AD45CB83A8A7CA /* Onest-SemiBold.ttf in Resources */,
+				718BB24675D841E0891E0C89 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
