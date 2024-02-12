@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   Button,
   Image,
@@ -7,38 +8,65 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
 import {colors} from '../../../styles/colors';
 import Loading from './components/Loading';
 import {fonts} from '../../../styles/fonts';
+import {useNavigation, useRoute} from '@react-navigation/native';
+import {useImageUploadContext} from '../../context/ImageUploadProvider';
 
 const Progress = () => {
-  const activeOpacity = 0.8;
+  // Accessing necessary context, navigation, and route
+  const {resetUploadedImages} = useImageUploadContext();
+  const navigation = useNavigation();
+  const route = useRoute();
+
+  // Destructure parameters from route or set default values
+  const {option, count} = route?.params || {};
+
+  // State to control the visibility of the modal
   const [modalVisible, setModalVisible] = useState(false);
 
+  // Function to open the modal
   const openModal = () => {
     setModalVisible(true);
   };
-  const closeModal = () => {
-    setModalVisible(false);
+
+  // Function to handle the "Go back to home" button press
+  const onBackToHomePress = () => {
+    // Reset the uploaded images context
+    resetUploadedImages?.();
+
+    // Navigate back to the 'image_collection' screen and reset the navigation stack
+    navigation.reset({
+      index: 0,
+      routes: [{name: 'image_collection'}],
+    });
   };
+
   return (
     <View style={styles.container}>
+      {/* Loading component */}
       <Loading openModal={openModal} />
-      <Modal
-        animationType="none"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={closeModal}>
+
+      {/* Modal */}
+      <Modal animationType="none" transparent={true} visible={modalVisible}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
+            {/* Success icon */}
             <Image source={require('../../../assets/images/tick.png')} />
+
+            {/* Success text */}
             <Text style={styles.successText}>Successful</Text>
+
+            {/* Success message */}
             <Text style={styles.successMessageText}>
-              Your 4 global images is successfully uploaded.
+              {`Your ${count} ${option} images have been successfully uploaded.`}
             </Text>
+
+            {/* "Go back to home" button */}
             <TouchableOpacity
-              activeOpacity={activeOpacity}
+              onPress={onBackToHomePress}
+              activeOpacity={0.8}
               style={styles.button}>
               <Text style={styles.buttonText}>Go back to home</Text>
             </TouchableOpacity>
@@ -80,14 +108,14 @@ const styles = StyleSheet.create({
     color: '#7698A1',
     fontSize: 16,
     marginTop: 10,
-   textAlign:"center"
+    textAlign: 'center',
   },
   button: {
     backgroundColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 10,
-    marginTop:20
+    marginTop: 20,
   },
   buttonText: {
     color: colors.white,
